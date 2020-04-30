@@ -1,0 +1,230 @@
+#me {
+  background: url(../images/intro.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#me {
+  font-family: "Courier New", Courier, monospace;
+  color: azure;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#about {
+  background: url(../images/programming\(6\).jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#about {
+  font-family: Arial, Helvetica, sans-serif;
+  color: azure;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+}
+
+#aboutText {
+  font-weight: bolder;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact {
+  background: url(../images/contact-me\(3\).jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#contact {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#contactText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+#socialLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.fab {
+  margin: 5px;
+}
+
+/* .aboutMe {
+  font-size: 24px;
+  font-weight: bolder;
+} */
+
+#typingText {
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+#typewriter #typingText {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.125em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.125em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+@media screen and (max-width: 667px) {
+  #first-text {
+    font-size: 16px;
+  }
+  #typingText {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1455px) {
+  #about {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 668px) and (max-width: 772px) {
+  #first-text {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 773px) and (max-width: 893px) {
+  #first-text {
+    font-size: 28px;
+  }
+}
+
+@media screen and (min-width: 894px) and (max-width: 1100px) {
+  #first-text {
+    font-size: 32px;
+  }
+}
+
+/* timeline */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.timeline::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0.4rem;
+  height: 100%;
+  background: #888;
+  z-index: 1;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "content-left image content-right";
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.item + .item {
+  margin-top: 4rem;
+}
+
+.wrap {
+  grid-area: content-left;
+  padding: 1rem;
+  max-width: 25rem;
+}
+
+.item:nth-child(even) .wrap {
+  grid-area: content-right;
+}
+
+.img {
+  width: 10rem;
+  height: 10rem;
+  background: #888;
+  border: 0.5rem solid #888;
+  border-radius: 50%;
+  grid-area: image;
+  overflow: hidden;
+}
+
+.img > img {
+  width: 100%;
+  height: auto;
+}
+
+/* body {
+  padding: 2rem;
+  line-height: 1.5;
+  background: #fafafa;
+} */
