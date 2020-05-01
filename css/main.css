@@ -1,5 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+
 #me {
-  background: url(../images/intro.png) no-repeat center center fixed;
+  background: url(../images/pure-terminal.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -89,8 +93,20 @@
   align-items: center;
 }
 
+#introPic {
+  width: 200px;
+  border-radius: 50%;
+  margin: 40px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: lime;
+}
+
 .fab {
-  margin: 5px;
+  margin-top: -20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: black;
 }
 
 /* .aboutMe {
@@ -140,6 +156,9 @@
   }
   #typingText {
     font-size: 20px;
+  }
+  #introPic {
+    width: 100px;
   }
 }
 
