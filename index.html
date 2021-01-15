@@ -53,7 +53,7 @@
       </div>
     </nav>
     <div id="me">
-        <img id="introPic" src="./images/intro-pic.jpg" alt="">
+        <img id="introPic" src="./images/currentPic.jpg" alt="">
         <div id="typewriter">
             <h1 id="typingText">Promises sound good only in JavaScript.</h1>
         </div>
@@ -75,7 +75,7 @@
     <div id="about">
         <p id="aboutText">
             <div><h1>ABOUT</h1></div>
-            First things first : If you're a programmer or aspiring to become one the first step is, get rid of Windows and get started with Linux.
+            First things first : If you're a programmer or aspiring to become one the first step is, get rid of Windows and get started with Unix.
             <br>
             I'm Sriharsh Aditya. I'm a Bachelor of ... No, no no. I hate the education system and hate to mention my academic status. So, let's do this again. I'm a technology lover who mingles about learning and implementing programming languages to build awesome things. I'm the guy who finds solace in working with backend. Currently hooked to learning Linux, Shell, Networking and Security, I aim to build a strong foundation for DevOps. Having done multiple internships, I have the thing to code for hours, run tests, implement new technologies in no time and still manage to maintain good coding standards.
             <br>
@@ -146,5 +146,32 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+        
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+    </script>
   </body>
 </html>
